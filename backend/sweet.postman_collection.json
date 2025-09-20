@@ -1,0 +1,364 @@
+{
+	"info": {
+		"_postman_id": "eb978309-1714-4d32-b782-1159ce7279f5",
+		"name": "sweet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47980170"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"abhay\",\n    \"email\" : \"abhay14122001@gmail.com\",\n    \"password\" : \"abhay123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"abhay14122001@gmail.com\",\n    \"password\" : \"abhay123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add sweet",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Y2U5ZWE3NjhhNDZmMmM4YzJkMjkxZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1ODM3MTU3MCwiZXhwIjoxNzU4NDU3OTcwfQ.KDyqHyoBWSt5oCcS_XjgRQP-YsPK2z8QUbrPBInn_pY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"gulab jamun\",\n    \"category\" : \"sweet\",\n    \"price\" : 100,\n    \"quantity\" : 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/sweets",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sweets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Sweet",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Y2U5YTVmNzczMGYwMmJkMGNiZDFlYyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3NTgzNzE2ODQsImV4cCI6MTc1ODQ1ODA4NH0.MZ_K5fQ64axzHyXhd9QIG4-T85o6D0oqdNyvpSpd59Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"abhay14122001@gmail.com\",\n    \"password\" : \"abhay123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/sweets",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sweets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Y2U5YTVmNzczMGYwMmJkMGNiZDFlYyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3NTgzNzE2ODQsImV4cCI6MTc1ODQ1ODA4NH0.MZ_K5fQ64axzHyXhd9QIG4-T85o6D0oqdNyvpSpd59Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"abhay14122001@gmail.com\",\n    \"password\" : \"abhay123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/sweets/search?name=gulab&category=sweet&minPrice=20&maxPrice=1000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sweets",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "gulab"
+						},
+						{
+							"key": "category",
+							"value": "sweet"
+						},
+						{
+							"key": "minPrice",
+							"value": "20"
+						},
+						{
+							"key": "maxPrice",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Y2U5ZWE3NjhhNDZmMmM4YzJkMjkxZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1ODM3MTk0NywiZXhwIjoxNzU4NDU4MzQ3fQ.gN2ll4OjPE_DgxF6v-2h1li2hYr9oSGBnd4hmHADN6Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"gulab jamun\",\n    \"category\" : \"sweet\",\n    \"price\" : 100,\n    \"quantity\" : 5000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/sweets/68ce9f0edb776730a6842a97",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sweets",
+						"68ce9f0edb776730a6842a97"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Y2U5ZWE3NjhhNDZmMmM4YzJkMjkxZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1ODM3MTk0NywiZXhwIjoxNzU4NDU4MzQ3fQ.gN2ll4OjPE_DgxF6v-2h1li2hYr9oSGBnd4hmHADN6Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"gulab jamun\",\n    \"category\" : \"sweet\",\n    \"price\" : 100,\n    \"quantity\" : 5000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/sweets/68ce9f0edb776730a6842a97",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sweets",
+						"68ce9f0edb776730a6842a97"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Y2U5ZWE3NjhhNDZmMmM4YzJkMjkxZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1ODM3MTk0NywiZXhwIjoxNzU4NDU4MzQ3fQ.gN2ll4OjPE_DgxF6v-2h1li2hYr9oSGBnd4hmHADN6Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"gulab jamun\",\n    \"category\" : \"sweet\",\n    \"price\" : 100,\n    \"quantity\" : 5000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/sweets/68cea0c9db776730a6842aa0/purchase",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sweets",
+						"68cea0c9db776730a6842aa0",
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restock",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Y2U5ZWE3NjhhNDZmMmM4YzJkMjkxZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1ODM3MTk0NywiZXhwIjoxNzU4NDU4MzQ3fQ.gN2ll4OjPE_DgxF6v-2h1li2hYr9oSGBnd4hmHADN6Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"gulab jamun\",\n    \"category\" : \"sweet\",\n    \"price\" : 100,\n    \"quantity\" : 5000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/sweets/68cea0c9db776730a6842aa0/purchase",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sweets",
+						"68cea0c9db776730a6842aa0",
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
